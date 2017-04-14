@@ -381,7 +381,7 @@ class MainWindow(QMainWindow):
                 "1.先设置录入要显示的名子<br>"
                 "2.设置要显示的名子的字体，具体设置字体，透明度，位置要素<br>"
                 "3.设置要显示的名子的文字颜色，默认为黑色<br>"
-                "4.设置背景图片，可以使用适应窗口快速设置按钮完成设置<br>  另外可以使用魔板进行快速设置</p>"
+                "4.设置背景图片，可以使用适应窗口快速设置按钮完成设置<br>  另外可以使用模板进行快速设置</p>"
                 "<p>若有疑问请联系<b> 安夏电子科技有限公司 </b><br>"
                 "<b>电话：</b> 4008017129<br>"
                 "<b>网址：</b><a href='www.anshare.com.cn'>www.anshare.com.cn</a></p>")    
@@ -577,7 +577,7 @@ class FontViewer(QDialog):
         FE_gridLayout0 = QGridLayout()
         row=0
         #政府魔板
-        ZF_Model_button = QPushButton("政府魔板")
+        ZF_Model_button = QPushButton("政府模板")
         FE_gridLayout0.addWidget(ZF_Model_button,row,0)
         ZF_Model_button.clicked.connect(self.ZFModelFunction)
         row=row+1

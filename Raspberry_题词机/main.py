@@ -1,42 +1,22 @@
 '''
-Created on 2016.07.15
+Created on 2017.05.05
 @author: Anshare_LY
-2016.08.14 完成图像处理部分的全部功能
-2016.08.18 完成树莓派 800*480官方屏幕的测试
-2016.08.19 重新调整布局 
-2016.08.22 完成树莓派上的二次细化完善
-2016.08.25 完成图片编辑自动保存功能
-2016.08.26 开始设计字体设置高级界面部分功能
-2016.08.29 完成字体高级编辑功能[字体设置、字体透明度、字体位置]
-2016.08.29 加入帮助板块 Group3 UseHelp & About
-2016.08.29 完成字体设置 政府模板 还有重置字体
-2016.08.29 *（可选） 完成图片编辑背景色填充设置
-2016.08.29 树莓派测试
-2016.09.06 修改细微 Bug【透明度滑动条、缩放滑动条  实现无极滑动】
-2016.09.06 修改帮助文件
-2016.09.07 修改字体设置页面退出闪退问题
-2016.09.08 修改逻辑错误  字体设置关闭、图片编辑关闭  按钮与应用按钮相同作用的Bug
-
-暂留问题：
- 1.字体编辑界面链接问题  OK
- 2.程序代码迭代 
- 3.功能优化
- 4.界面布局
+@版本记录:
+2017.05.05 初始化项目
 '''
+
 import sys  
 from PyQt5 import *
 from PyQt5.QtGui import *  
 from PyQt5.QtCore import *  
 from PyQt5.QtWidgets import *
 
-
-class MainWindow(QMainWindow):
-     
+class MainWindow(QMainWindow):     
     def __init__(self, parent = None):
         super().__init__(parent)
         #显示暂存量
         self.name_input="安 夏"
-        self.WindowsTitle="安夏电子席卡   ——V 1.3.2"
+        self.WindowsTitle="安夏审讯题词器   ——V "+"1.0.0"
         PictureResource="AXLogo.png"
         self.Fort_color_R=Qt.black
         self.BG_color_R=Qt.white

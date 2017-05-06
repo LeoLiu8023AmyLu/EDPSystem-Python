@@ -12,3 +12,6 @@
 
 ## 身份验证部分</br>
 1. 验证使用人权限 </br>
+
+## 相关资料</br>
+1. [python socket 多人聊天室](https://www.oschina.net/code/snippet_1387924_25928)</br>

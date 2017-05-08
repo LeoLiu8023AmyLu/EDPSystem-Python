@@ -8,15 +8,15 @@ import sys
 import threading
  
 con = threading.Condition()
-HOST = input("input the server's ip adrress: ") # Symbolic name meaning all available interfaces
+HOST = input("输入服务端IP地址: ") # Symbolic name meaning all available interfaces
 PORT = 8888 # Arbitrary non-privileged port
 data = ''
  
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print('Socket created')
+print('Socket 生成完毕')
 s.bind((HOST, PORT))
 s.listen(10)
-print('Socket now listening')
+print('Socket 监听中')
  
 #Function for handling connections. This will be used to create threads
 def clientThreadIn(conn, nick):

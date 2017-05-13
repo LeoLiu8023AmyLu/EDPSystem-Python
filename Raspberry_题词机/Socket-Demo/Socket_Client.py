@@ -1,23 +1,21 @@
 # -*- coding: utf-8 -*-
 '''
 Created on 2017年5月7日
-
 @author: LeoLiu
 '''
 import socket
 import threading
  
- 
-inString = ''
-outString = ''
-nick = ''
+inString = '' # 输入的字符串
+outString = '' # 输出的字符串
+nick = '' # 用户聊天名称
  
 def DealOut(s):
-    global nick, outString
+    global nick, outString # 建立全局字符
     while True:
-        outString = raw_input()
-        outString = nick + ': ' + outString
-        s.send(outString)
+        outString = raw_input() # 等待输入字符串
+        outString = nick + ': ' + outString # 组成用户名+ 字符串
+        s.send(outString) # Socket 输出
  
 def DealIn(s):
     global inString

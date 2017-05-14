@@ -12,10 +12,10 @@ HOST = input("输入服务端IP地址: ") # Symbolic name meaning all available 
 PORT = 8888 # Arbitrary non-privileged port
 data = ''
  
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # 设置 Socket 
 print('Socket 生成完毕')
-s.bind((HOST, PORT))
-s.listen(10)
+s.bind((HOST, PORT)) # 设置端口
+s.listen(10) # 监听
 print('Socket 监听中')
  
 #Function for handling connections. This will be used to create threads

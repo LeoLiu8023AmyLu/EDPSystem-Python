@@ -21,24 +21,24 @@ def DealIn(s):
     global inString
     while True:
         try:
-            inString = s.recv(1024)
+            inString = s.recv(1024) # 接收缓存
             if not inString:
                 break
             if outString != inString:
-                print(inString)
+                print(inString) # 打印字符
         except:
             break
          
  
-nick = input("input your nickname: ")
-ip = raw_input("input the server's ip adrress: ")
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((ip, 8888))
-sock.send(nick)
+nick = input("input your nickname: ") # 名称
+ip = raw_input("input the server's ip adrress: ") # IP 地址
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # 设置 Socket
+sock.connect((ip, 8888)) # 设置端口
+sock.send(nick) # 发送 姓名
  
-thin = threading.Thread(target = DealIn, args = (sock,))
+thin = threading.Thread(target = DealIn, args = (sock,)) # 加入进程
 thin.start()
-thout = threading.Thread(target = DealOut, args = (sock,))
+thout = threading.Thread(target = DealOut, args = (sock,)) # 加入进程
 thout.start()
  
 #sock.close()

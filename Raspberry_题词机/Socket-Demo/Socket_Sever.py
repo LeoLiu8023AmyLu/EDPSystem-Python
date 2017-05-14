@@ -70,7 +70,7 @@ while 1:
     print(data)
     print(str((threading.activeCount() + 1) / 2) + ' person(s)!')
     conn.send(data)
-    threading.Thread(target = clientThreadIn , args = (conn, nick)).start()
-    threading.Thread(target = ClientThreadOut , args = (conn, nick)).start()
+    threading.Thread(target = clientThreadIn , args = (conn, nick)).start() # 进程
+    threading.Thread(target = ClientThreadOut , args = (conn, nick)).start() # 进程
  
 s.close()
